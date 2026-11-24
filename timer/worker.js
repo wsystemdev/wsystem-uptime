@@ -49,6 +49,7 @@ function summarize(rows, now) {
     daily: Object.fromEntries(Object.entries(days).sort().map(([d, v]) => [d, Math.round(10000 * v[1] / v[0]) / 100])),
     incidents: inc.slice(-10), by_source: bySrc,
     cf_worker_interval_s: gaps.length ? {median: gaps[Math.floor(gaps.length / 2)], max: gaps[gaps.length - 1], runs: cf.length} : null,
+    cf_first_probe: cf.length ? cf[0] : null,
     method: "outside probe: Cloudflare Worker cron every 5 min (since first cf-worker probe) plus GitHub Actions runs when GitHub schedules them; up = API health + website + VAT lookup all pass (one retry 5 s later); incident = 2+ consecutive failed probes"};
 }
 async function ghRows() {
