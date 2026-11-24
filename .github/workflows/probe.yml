@@ -11,6 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: python3 probe.py && python3 summarize.py
+      - run: python3 archive_worker.py || true
       - run: |
           git config user.name "W System probe"; git config user.email "probe@users.noreply.github.com"
           git add data && git commit -qm "probe" && git push -q || true

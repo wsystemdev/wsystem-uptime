@@ -1,0 +1,12 @@
+name = "wsystem-uptime-probe"
+main = "worker.js"
+compatibility_date = "2026-11-01"
+workers_dev = true
+
+[triggers]
+crons = ["*/5 * * * *"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "wsystem-uptime"
+database_id = "298f0429-aa8e-4d16-ad2d-819b3c8e5031"
