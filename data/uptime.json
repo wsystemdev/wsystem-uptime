@@ -1,10 +1,10 @@
 {
- "generated": 1795578242,
+ "generated": 1795602568,
  "window_days": 30,
  "days_of_data": 3,
- "probes": 5,
+ "probes": 6,
  "uptime_pct": 100.0,
- "api_health_p50_ms": 267,
+ "api_health_p50_ms": 278,
  "api_health_p95_ms": 359,
  "daily": {
   "2026-11-23": 100.0,
